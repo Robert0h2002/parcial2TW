@@ -1,5 +1,5 @@
  
-const API_KEY = 'PEGA_AQUI_TU_API_KEY'; 
+const API_KEY = 'ade1706c651735f930986e8e948a5214'; 
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -95,7 +95,7 @@ const crearTarjeta = (serie) => {
             </div>
             <div class="serie-card__content">
                 <h3 class="serie-card__title">${name}</h3>
-                <p class="serie-card__year">${año}</p>
+                <p class="serie-card__year">📅 ${año}</p>
             </div>
         </article>
     `;
@@ -104,7 +104,7 @@ const crearTarjeta = (serie) => {
 // Dibuja todas las series en el grid
 const mostrarSeries = (series) => {
     seriesGrid.innerHTML = series.map(crearTarjeta).join('');
-    resultsCount.textContent = `${series.length} series encontradas`;
+    resultsCount.textContent = `${series.length} resultados`;
 };
 
 // Al cargar la página: muestra el loading, trae las populares y las pinta
